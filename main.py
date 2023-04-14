@@ -51,11 +51,17 @@ def get_forks_with_commits_ahead(owner, repo, progress_filename="progress.json")
         # Get the commit count ahead for each fork
         for i, fork in enumerate(forks, start=1):
             progress["total_forks_processed"] += 1
-            comparison_url = f"{base_url}/compare/{base_commit_sha}...{fork['default_branch']}"
+
+            # Fetches the commit SHA for the fork's default branch
+            fork_commit_url = f"https://api.github.com/repos/{fork['full_name']}/git/refs/heads/{fork['default_branch']}"
+            fork_commit = requests.get(fork_commit_url, headers=headers).json()
+            fork_commit_sha = fork_commit["object"]["sha"]
+
+            # Construct the comparison URL using base_commit_sha and fork_commit_sha
+            comparison_url = f"{base_url}/compare/{base_commit_sha}...{fork_commit_sha}"
             comparison = requests.get(comparison_url, headers=headers).json()
-            # print(fork['default_branch'])
-            # print("Fork:", str(fork))
-            # print("Comparison:", comparison)
+            print("Comparison:", comparison)
+
             commits_ahead = comparison.get("ahead_by", 0)
             commits_behind = comparison.get("behind_by", 0)
 
@@ -96,8 +102,8 @@ def load_progress(filename):
     except (FileNotFoundError, json.JSONDecodeError):
         progress = {
             "searched_pages": [],
-            "forks_with_commits_ahead": {},
-            "forks_with_commits_ahead_but_not_behind": {},
+            "forks_with_commits_ahead": [],
+            "forks_with_commits_ahead_but_not_behind": [],
             "forks_identical_or_behind": [],
             "total_forks_processed": 0,
             "errors": 0,
