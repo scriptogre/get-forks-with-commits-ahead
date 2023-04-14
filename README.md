@@ -15,7 +15,7 @@ pip install requests
 
 ## Usage
 
-1. Update the `.env` file with your GITHUB_TOKEN (your GitHub personal access token), GITHUB_OWNER & GITHUB_REPO (username of target repository's owner and repository's name) and PROGRESS_FILENAME (the name of the file to keep track of prgoress).
+1. Update the `.env` file with your GITHUB_TOKEN (your GitHub personal access token), GITHUB_OWNER & GITHUB_REPO (username of target repository's owner and repository's name) and PROGRESS_FILENAME (the name of the file to keep track of progress).
 2. Run the script:
 ```bash
 python forks_commit_comparison.py
