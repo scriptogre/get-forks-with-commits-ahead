@@ -1,0 +1,65 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DjangoUnresolvedTagInspection" enabled="true" level="WARNING" enabled_by_default="true" editorAttributes="WARNING_ATTRIBUTES" />
+    <inspection_tool class="DjangoUnresolvedUrlInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="24">
+            <item index="0" class="java.lang.String" itemvalue="x-data" />
+            <item index="1" class="java.lang.String" itemvalue=":class" />
+            <item index="2" class="java.lang.String" itemvalue="hx-get" />
+            <item index="3" class="java.lang.String" itemvalue="hx-target" />
+            <item index="4" class="java.lang.String" itemvalue="hx-swap" />
+            <item index="5" class="java.lang.String" itemvalue="hx-indicator" />
+            <item index="6" class="java.lang.String" itemvalue="hx-boost" />
+            <item index="7" class="java.lang.String" itemvalue="hx-headers" />
+            <item index="8" class="java.lang.String" itemvalue="x-bind:value" />
+            <item index="9" class="java.lang.String" itemvalue="hx-vals" />
+            <item index="10" class="java.lang.String" itemvalue="hx-trigger" />
+            <item index="11" class="java.lang.String" itemvalue="hx-include" />
+            <item index="12" class="java.lang.String" itemvalue="x-ref" />
+            <item index="13" class="java.lang.String" itemvalue="hx-post" />
+            <item index="14" class="java.lang.String" itemvalue="hx-push-url" />
+            <item index="15" class="java.lang.String" itemvalue="hx-swap-oob" />
+            <item index="16" class="java.lang.String" itemvalue="x-on:resize.window" />
+            <item index="17" class="java.lang.String" itemvalue="x-init" />
+            <item index="18" class="java.lang.String" itemvalue="_" />
+            <item index="19" class="java.lang.String" itemvalue="hx-ext" />
+            <item index="20" class="java.lang.String" itemvalue="x-on:click.debounce" />
+            <item index="21" class="java.lang.String" itemvalue="hx-history-elt" />
+            <item index="22" class="java.lang.String" itemvalue="hx-history" />
+            <item index="23" class="java.lang.String" itemvalue="hx-request" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="super.get_initial" />
+          <option value="template_name" />
+          <option value="dict.created_by" />
+          <option value="dict.STATE_REJECTED" />
+          <option value="dict.id" />
+          <option value="dict.assigned_to" />
+          <option value="dict.STATE_DELETED" />
+          <option value="dict.STATE_APPROVED" />
+          <option value="dict.STATE_UPDATING_BUDGET_TYPE" />
+          <option value="dict.STATE_UPDATING_PROJECT_DETAILS" />
+          <option value="dict.STATE_PENDING_CEO" />
+          <option value="dict.update_state_history" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
